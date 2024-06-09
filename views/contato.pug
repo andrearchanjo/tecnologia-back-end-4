@@ -1,0 +1,17 @@
+doctype html
+html
+    head
+        title Página de Contato
+        link(rel='stylesheet', href='/css/styles.css')
+    body
+        #div_formulario
+            h2 Formulário de Contato
+            form(action='/contato', method='post')
+                .campo
+                    input.input_campo(type='text', name='nome', placeholder='Nome', required=true)
+                .campo
+                    input.input_campo(type='email', name='email', placeholder='E-mail', required=true)
+                .campo
+                    textarea.input_campo(name='comentarios', placeholder='Comentários', required=true rows=4)
+                #div_botoes
+                    button.input_botao(type='submit') Enviar
