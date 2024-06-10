@@ -4,7 +4,7 @@ html
         title Página de Contato
         link(rel='stylesheet', href='/css/styles.css')
     body
-        #div_formulario
+        #div_principal
             h2 Formulário de Contato
             form(action='/contato', method='post')
                 .campo
@@ -15,3 +15,7 @@ html
                     textarea.input_campo(name='comentarios', placeholder='Comentários', required=true rows=4)
                 #div_botoes
                     button.input_botao(type='submit') Enviar
+        footer#rodape
+            p Autor: André Archanjo Nunes Coelho
+            p Contato: 
+                a(href='mailto:archanjoandre@yahoo.com.br') archanjoandre@yahoo.com.br

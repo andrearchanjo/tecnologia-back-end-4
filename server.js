@@ -32,10 +32,10 @@ app.get('/contato', (req, res) => {
 });
 
 app.post('/contato', (req, res) => {
-    const { nome, email, comentarios } = req.body;
-    const requestTime = req.requestTime;
+	const { nome, email, comentarios } = req.body;
+	const requestTime = req.requestTime;
 
-    res.send(`Obrigado pelo contato, ${nome}! Recebemos seu comentário: "${comentarios}". A requisição foi feita em: ${requestTime}`);
+	res.render('resposta', { nome, email, comentarios, requestTime });
 });
 
 app.use((req, res) => {
